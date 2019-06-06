@@ -1,0 +1,69 @@
+AIM
+OBJECTIVES
+
+SCOPE
+Out of number of security vulnerabilities we want to concentrate on the arithemetic vulnerabilities alone because ............... 
+
+MOTIVATION
+The arithemtic vulnerabilities is listed among the top 10 security issues in smart contracts applications, https://dasp.co/#item-3. Our focus is to improve the integrity feature where malicious attacker will find it a bit difficult to change a value and steal Ether like DAO attack that consume over $60m (CITE). We will do this by improving the SafeMath library. The library by itself brought some overhead to the gas cost and the transaction cost which we also aim at balancing.
+
+INTRO
+-In the past, transactions have been using peer to peer technologies with fairly cryptographic rudiments to ensure trust. However, such system is proven to be unsecured (CITE). This brought about Distributed Applications (DApps) like the blockchain been birth. What is blockchain/Distributed ledger? ---blockchain has no centralised control Then briefly on Smart contract.
+Despite the emerging success of the smart contracts, there are quite number of security vulnerabilties arising. They are......?? In this dissertation we are focusing on the Arithemetic vulnerabilities which is about 90% out of the published vulnerabilities in the CVE (CITE)
+
+BITCOIN
+Satoshi Nakamoto 
+jhdshd
+whdhsd
+hdh
+BLOCKCHAIN
+-In January 2009, Bitcoin emerged to allow first of it kinds digital currency aim at bridging the gap of traditinal currency. It works without the need of banks or any central authorities like the central banks or government financial regulatory agencies. It is a distruptive technology that uses it members to manage the storage, validation, and authorisation of all transactions through a concensus protocal (CITE). For a transaction to be valid it has to reach >=50% of the nodes. The devices or members connected are termed as nodes in this case.
+
+-Interestingly, the blockchain application is diffcult to be forged as there are series of blocks all of whihc has data, hash and hash of the previous block. A hash is a unique attribute like the fungerprint. The hashes of the blockchain are interlinked to each other and once a block is changed, all the blocks will know. Proof of Work mechanims allow that to happen by ensuring that every block is intact. This is done through distributed networks. All the temtpered block are always unaccepted by the other blocks. This is called immutabilty feature. 
+
+-Technically, blockchain is a revolutionised database in computing perspective as it is considered a distributed ledger to finance. All the data is stored in every client computers as agains the central or decentralised database to sparingly number of servers. Figures here differenciating traditional database and the blockchain here....
+Flaws of traditional database that blockchain solved:
+->central authority whihc could be bias restricting access to who to access, what to access, when to access among others.
+->it has remove single point of failure issue, yet brought privacy issues
+-However, blockchain like any other technology inroduces number of problems 
+-> transaction speed
+-> verification
+-> data management
+-> security
+-> provacy
+-> integration to other technologies through standards
+-Blockchain important concepts:
+-> hash, nonce, solving math puzzles through mining
+
+
+ETHEREUM
+Also called Web 3.0 because of the level of distruption is likely to bring to the Internet. How???
+It is the platform to build Distributed applications (DApps) using programming language like Solidity and Vyper. Vyper is still under experiement while Solidity remain the most polular language. (CITE)
+
+EVM
+-The ethereum virtual machine, EVM ensure the execution of smart contracts distributively in Ethereum network. Miners use the EVM to mine smart contracts (Torres). It is essentially used to enure concensus among different nodes on the blokchain network for contracts execution.
+
+SMART CONTRACTS
+Improve reputation and integrity
+mention those 19 industries distrupted
+-Smart contracts are self executing programs that are aim at remving a third party between two or more parties making some transactions. Smart contract removes any dependence from a third party as well as underlying charges that may arise as a results of such dependency. However, whenever these contracts are executed there is considerable amount of incentives to be paid by the owner called 'gas value' which is measured in a unit 'wei'. The fee is paid to group of individuals called miners who validate transactions by solving difficult mathematical puzzles when contract is executed. It is essential to ensure that there is enough gas before a contract is run to avoid loss because when  it is insufficient, the expended gas loss will not be refunded and the transaction is terminated and roll back. The gas value is computed based on the amount of time and resources needed to executive a smart contract. That is why it is recommended by write low-running time contracts.
+-A smart contract is immutable because when it is deployed as a Decentralised applications (DApps) on ethereum it can not be altered. The only way is to deployed the another modified version again.
+-The functions in the traditional applications like the OOP are executed in a predefined way as against to smart contracts functions where everyone in the blokchain call call and execute them without the programmers consent and or denial. As such if they are malicious callers something wrong can happen as a result.
+
+MOTIVATION:
+-Out of 500 plus published security vulnerabilies on the common vulnerabilties exposure (CVE) database, over 400 plus are related to arithmetic flaws like integer overflow or underflow. In an attempt to deal with arithemetic vulnerabilities, SafeMath library was developed. A well known DAO attack which engulf $60m worth of ether exploited integer underflow vulnerability present in the smart contract implementation.
+
+-However, If the smart contract delayed due an additinal SafeMath libray it will abrupty affects the availability as when execution it might run out of gas, however, when there is no adequate measures in the SafeMath library, the contract is vulnerabale to all sorts of vulnerabilties leading to especially integrity being compromised. The tradoff between these two security requirement is paramount important to any modern information system employing the ethereum smart contract technologies.
+
+SOLIDITY:
+Solidity is the most popular programming language for writing smart contracts. It is C/JavaScript like language whihc become quite easier for developers with idea from these two languages. It is inteded to be simple as more and more poeple not just developers are expected to compose series of smart contracts in recent years (CITE).
+
+
+POINTS:
+
+1st June 2019
+- The underlying assumption of trust is that all blockchain nodes are trustworthy (Torres)
+- The Bitcoin revolutinised the banks while ethereum aim at decentralising computer system as a whole by the ethereum virtual machine (EVM) (Galvin Wood, reported in Torres)
+
+SCOPING
+-While earlier research considered formal verification of smart contractsa and bugs analysis by symbolic execution mechanism. What are these two techniques???? The main concern is to analyse as much vulnerabilities as possible using these tools. There is concerned on the recall and precision in terms of false positives and false negetives. Our work is aim at revising the SafeMath library in ensuring that it run time cost is improve while maintaining the security features. Our goal is to improve smart contract securit by design. What is security by design. We will test our work with number of published smart contracts. 

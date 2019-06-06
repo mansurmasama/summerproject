@@ -1,0 +1,3 @@
+Existing Tools:
+https://github.com/christoftorres/Osiris
+https://github.com/melonproject/oyente
