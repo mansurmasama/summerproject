@@ -1,0 +1,4 @@
+https://solidity.readthedocs.io/en/v0.5.3/installing-solidity.html
+
+
+https://remix.ethereum.org

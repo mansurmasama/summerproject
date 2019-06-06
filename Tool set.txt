@@ -1,0 +1,9 @@
+Environment:
+https://truffleframework.com/tutorials/how-to-install-truffle-and-testrpc-on-windows-for-blockchain-development
+
+
+Sabastien Arbogast Tutorial on Building Smart Contracts Development from Udemy:
+https://github.com/chainskills/cryptoseries
+
+
+Environment location: PS C:\users\Mansur Aliyu Masama\Documents\truffle>

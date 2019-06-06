@@ -1,0 +1,48 @@
+Attacks and Vulnerabilities Talks:
+------------------------------------
+https://www.youtube.com/watch?v=apCGPh7tKhw
+An Overview of Blockchain-Based Smart Contract Security Vulnerabilities
+
+https://www.youtube.com/watch?v=-I5zrGl8A0Y
+InfoSEC Livestream - Hacking ETH Smart Contracts using Integer Underflow & Overflow
+
+https://www.youtube.com/watch?v=jDbQ7roq6Qg
+Attacks on Ethereum Smart Contracts
+
+https://www.youtube.com/watch?v=mW4jQzPVP_A
+**USENIX Security '18 - teEther: Gnawing at Ethereum to Automatically Exploit Smart Contracts
+
+https://www.youtube.com/watch?v=5p_J4csHR0c
+Blockchain Academy - A Survey of Attacks on Ethereum Smart Contracts
+
+
+https://www.youtube.com/watch?v=M5v-H1oKBGU&t=123s
+Using SafeMath library in Solidity
+
+https://www.youtube.com/watch?v=s677QFT6e4U
+Create Your Own Cryptocurrency On Ethereum 2 - SafeMath and Crowdsales | Blockchain
+
+https://www.youtube.com/watch?v=0Lyf_3kA3Ms
+Learning Solidity : Tutorial 4 Imports and Libraries
+
+https://www.youtube.com/watch?v=WIEessi3ntk
+DEF CON 25 - Konstantinos Karagiannis - Hacking Smart Contracts
+
+------------------------------------------------------
+https://www.youtube.com/watch?v=0phCtYMx2Ac
+Building And Deploying Ethereum Smart Contracts With Solidity and JavaScript
+
+----------------UNVERIFIED FOR GOODNESS----------------------
+https://www.youtube.com/watch?v=odCH8j99Pwo&list=PLH4m2oS2ratezNN4t2apiQDCTLJIZpdLV
+https://www.youtube.com/watch?v=csS1mZFuNSY
+https://www.youtube.com/watch?v=iQ2q4vk5SG4
+https://www.youtube.com/watch?v=DkVpUqzU8SI
+https://www.youtube.com/watch?v=HVqoDjxQvIU
+https://www.youtube.com/watch?v=RHh1qSx7v6w
+https://www.youtube.com/watch?v=UbmPvfuzA-g
+https://www.youtube.com/watch?v=QQZrKD1tdUI
+https://www.youtube.com/watch?v=2TofunAI6fU
+https://www.youtube.com/watch?v=VtZKm6B8khQ
+https://www.youtube.com/watch?v=pv032ppbakA
+----------------------------------------------------------
+
