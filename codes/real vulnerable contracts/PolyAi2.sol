@@ -1,5 +1,5 @@
 //Compiler Version: v0.4.14+commit.c2215d46 Vulnerable function: 136-140
-pragma solidity ^0.4.10;
+pragma solidity ^0.4.2;
 //pragma solidity ^0.5.0;
 import "browser/SafeMath8.sol";
 //import "browser/SafeMath.sol";
