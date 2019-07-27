@@ -26,7 +26,6 @@ contract token {
     string public symbol;
     uint8 public decimals;
     uint256 public totalSupply;
-    //using SafeMath for uint256;
     /* This creates an array with all balances */
     mapping (address => uint256) public balanceOf;
     mapping (address => mapping (address => uint256)) public allowance;
@@ -132,16 +131,6 @@ contract PolyAi is owned, token {
 
     function mintToken(address target, uint256 mintedAmount) onlyOwner {
         balanceOf[target] += mintedAmount ; // initial contract expression
-        
-        /*
-         uint256 temp=balanceOf[target]; // temp varible for SafeMath8 expression
-         balanceOf[target] =temp+mintedAmount; //SafeMath8 expression
-         balanceOf[target].addmult(temp,mintedAmount); //SafeMath8 function call
-         */
-        
-        //the above three expressions severely affects the gas cost to rise over SafeMath
-        
-        //balanceOf[target] = balanceOf[target].add(mintedAmount); //SafeMath expression and function call
         
         Transfer(0, owner, mintedAmount);
         Transfer(owner, target, mintedAmount);
