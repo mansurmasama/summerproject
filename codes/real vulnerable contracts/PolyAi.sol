@@ -4,27 +4,6 @@ pragma solidity ^0.4.2;
 //import "browser/SafeMath8.sol";
 //import "browser/SafeMath.sol";
 
-/*
-library SafeMath {
-
-     //merging add and mul functions 
-    function addmult(uint256 c,uint256 a, uint256 b) internal constant {
-
-    
-     require(c >= a && c >= b);
-}
-   
-     // merging mod and div and sub functions
-    function moddivsub(uint256 c, uint256 a, uint256 b  ) internal constant  {
-
-        require(c<=a && b > 0);
-        
-           }
-    
-}
-//end library
-
-*/
 contract owned {
     address public owner;
 
