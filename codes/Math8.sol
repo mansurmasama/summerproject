@@ -1,6 +1,6 @@
 //with a SafeMath8, merging sub, div and mod
 
-pragma solidity ^0.5.0;
+pragma solidity ^0.4.2;
 
 
 
@@ -8,14 +8,30 @@ pragma solidity ^0.5.0;
 //import "browser/SafeMath4.sol";
 
 //This library focuses on output (c) rather than inputs (a and b) V1
-import "browser/SafeMath8.sol";
+library SafeMath {
+
+     //merging add and mul functions 
+    function addmult(uint256 c,uint256 a, uint256 b) internal constant {
+
+    
+     require(c >= a && c >= b);
+}
+   
+     // merging mod and div and sub functions
+    function moddivsub(uint256 c, uint256 a, uint256 b  ) internal constant  {
+
+        require(c<=a && b > 0);
+        
+           }
+    
+}
 
 contract Maths {
-    using SafeMath8 for uint256;
+    using SafeMath for uint256;
     uint256 public total;
     //uint256 public b;
     
-    function Math() public pure {
+    function Math() public constant {
         //constructor
     }
     
