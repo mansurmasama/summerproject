@@ -1,4 +1,8 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.5.0;
+
+
+
+
 
 
 /**
@@ -148,7 +152,7 @@ interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 
 }
-// end of IERC
+
 
 /**
  * @dev Wrappers over Solidity's arithmetic operations with added overflow
@@ -299,7 +303,6 @@ library SafeMath {
     }
 }
 
-//end of SafeMath
 
 
 /**
