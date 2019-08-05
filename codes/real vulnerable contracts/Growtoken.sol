@@ -2,7 +2,7 @@
  *Submitted for verification at Etherscan.io on 2018-07-05
 */
 pragma solidity ^0.4.2;
-import "browser/SafeMath8.sol";
+//import "browser/SafeMath8.sol";
 //import "browser/SafeMath.sol";
 
 interface tokenRecipient{
@@ -19,7 +19,7 @@ contract GrowToken{
     uint256 public buyPrice;
     bool public sellOpen;
     bool public buyOpen;
-    using SafeMath for uint256;
+    //using SafeMath for uint256;
     
     //store token data set
     mapping(address => uint256) public balanceOf;
@@ -31,13 +31,13 @@ contract GrowToken{
     //event for transition
     event Transfer(address indexed from,address indexed to , uint256 value);
     //event for allowance
-    event Approval(address indexed owner2,address indexed spender,uint256 value);
+    event Approval(address indexed owner,address indexed spender,uint256 value);
     //event for freeze/unfreeze Account 
     event FrozenFunds(address target,bool freeze);
     //TODO event for sell token , do't need it now
-    event SellToken(address seller,uint256 sellPrice2, uint256 amount,uint256 getEth);
+    event SellToken(address seller,uint256 sellPrice, uint256 amount,uint256 getEth);
     //TODO event for buy token , do't need it now 
-    event BuyToken(address buyer,uint256 buyPrice2,uint256 amount,uint256 spendEth);
+    event BuyToken(address buyer,uint256 buyPrice,uint256 amount,uint256 spendEth);
     
     modifier onlyOwner {
         if(msg.sender == owner) revert();
@@ -177,8 +177,7 @@ contract GrowToken{
         _transfer(_from,owner,amount);
         
         revenue = amount * sellPrice; //Initial contract expression, vulnerable
-        
-        revenue.addmult(amount,sellPrice); //SafeMath8
+        //revenue.addmult(amount,sellPrice); //SafeMath8
         //revenue = amount.mul(sellPrice); //SafeMath
         
         _from.transfer(revenue);                     // sends ether to the seller: it's important to do this last to prevent recursion attacks
