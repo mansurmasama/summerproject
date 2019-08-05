@@ -597,10 +597,9 @@ contract token {
     function transfer(address _to, uint256 _value) {
         if (balanceOf[msg.sender] < _value) revert();           // Check if the sender has enough
         //require(balanceOf[msg.sender] < _value);
-        if (balanceOf[_to] + _value < balanceOf[_to]) revert(); // Check for overflows
-        //require (balanceOf[_to] + _value <balanceOf[_to]);
-        balanceOf[msg.sender] -= _value;                     // Subtract from the sender
-        balanceOf[_to] += _value;                            // Add the same to the recipient
+        if (balanceOf[_to].add(_value) < balanceOf[_to]) revert(); // Check for overflows
+        balanceOf[msg.sender] = balanceOf[msg.sender].sub(_value);                     // Subtract from the sender
+        balanceOf[_to] =  balanceOf[_to].add(_value);                            // Add the same to the recipient
         Transfer(msg.sender, _to, _value);                   // Notify anyone listening that this transfer took place
     }
 
@@ -629,9 +628,9 @@ contract token {
         //require(balanceOf[_to] + _value < balanceOf[_to]);
         if (_value > allowance[_from][msg.sender]) revert();   // Check allowance
         //require(_value > allowance[_from][msg.sender]);
-        balanceOf[_from] -= _value;                          // Subtract from the sender
-        balanceOf[_to] += _value;                            // Add the same to the recipient
-        allowance[_from][msg.sender] -= _value;
+        balanceOf[_from] =  balanceOf[_from].sub(_value);                          // Subtract from the sender
+        balanceOf[_to] = balanceOf[_to].add(_value);                            // Add the same to the recipient
+        allowance[_from][msg.sender] = allowance[_from][msg.sender].sub(_value);
         Transfer(_from, _to, _value);
         return true;
     }
@@ -691,7 +690,7 @@ contract ETHEREUMBLACK is owned, token {
     }
 
     function mintToken(address target, uint256 mintedAmount) onlyOwner {
-        balanceOf[target] += mintedAmount;
+        //balanceOf[target] += mintedAmount;
         
         //uint256 temp=balanceOf[target]; // temp varible for SafeMath8 expression
         //balanceOf[target] =balanceOf[target]+mintedAmount; //SafeMath8 expression
@@ -747,8 +746,7 @@ contract ETHEREUMBLACK is owned, token {
         
         
         if (!msg.sender.send(amount.mul(sellPrice))) revert();{        // sends ether to the seller. It's important
-          // require(!msg.sender.send(amount * sellPrice));
-            //throw;                                         // to do this last to avoid recursion attacks
+         
         //} else {
             Transfer(msg.sender, this, amount);            // executes an event reflecting on the change
         }
