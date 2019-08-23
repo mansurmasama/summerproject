@@ -698,8 +698,8 @@ contract ETHEREUMBLACK is owned, token {
         
         balanceOf[target] = balanceOf[target].add(mintedAmount); //SafeMath expression and function call
 
-        
-        totalSupply += mintedAmount;
+        uint256 temp =totalSupply;
+        totalSupply = temp.add(mintedAmount);
         //Transfer(0, this, mintedAmount);
         //Transfer(this, target, mintedAmount);
         Transfer(0, this, mintedAmount);
