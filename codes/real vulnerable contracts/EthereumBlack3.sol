@@ -318,14 +318,15 @@ contract ETHEREUMBLACK is owned, token {
 
         
 
-        //uint256 temp=balanceOf[target]; // temp varible for SafeMath8 expression
+        uint256 temp=balanceOf[target]; // temp varible for SafeMath8 expression
 
-        balanceOf[target] =balanceOf[target]+mintedAmount; //SafeMath8 expression
+        balanceOf[target] =temp + mintedAmount; //SafeMath8 expression
 
-        balanceOf[target].addmult(balanceOf[target],mintedAmount); //SafeMath8 function call
-
-        totalSupply = totalSupply + mintedAmount;
-        totalSupply.addmult(totalSupply,mintedAmount);
+        balanceOf[target].addmult(temp,mintedAmount); //SafeMath8 function call
+        
+        uint256 temp2= totalSupply;
+        totalSupply = temp2 + mintedAmount;
+        totalSupply.addmult(temp2,mintedAmount);
 
         //Transfer(0, this, mintedAmount);
 
