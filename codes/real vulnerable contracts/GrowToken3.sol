@@ -191,6 +191,7 @@ contract GrowToken{
         if(_from!=owner) revert();
         _transfer(_from,owner,amount);
         
+        revenue = amount * sellPrice; //Initial contract expression, vulnerable
         revenue.addmult(amount,sellPrice); //SafeMath8
 
         _from.transfer(revenue);                     // sends ether to the seller: it's important to do this last to prevent recursion attacks
