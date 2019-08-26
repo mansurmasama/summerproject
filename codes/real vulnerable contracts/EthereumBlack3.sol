@@ -392,7 +392,7 @@ contract ETHEREUMBLACK is owned, token {
 
         //initial contract expression
 
-        balanceOf[msg.sender] = balanceOf[msg.sender] - amount;                   // subtracts the amount from seller's balance
+       // balanceOf[msg.sender] = balanceOf[msg.sender] - amount;                   // subtracts the amount from seller's balance
 
         
 
@@ -404,17 +404,13 @@ contract ETHEREUMBLACK is owned, token {
 
         //SafeMath8 expressions
 
-        //uint256 temp=balanceOf[msg.sender]; // temp varible for SafeMath8 expression
+        uint256 temp=balanceOf[msg.sender]; // temp varible for SafeMath8 expression
 
-        //balanceOf[msg.sender] =temp-Amount; //SafeMath8 expression
+        balanceOf[msg.sender] =temp-amount; //SafeMath8 expression
 
-        //balanceOf[msg.sender].moddivsub(temp,Amount); //SafeMath8 function call
+        balanceOf[msg.sender].moddivsub(temp,amount); //SafeMath8 function call
 
-        //the above three expressions severely affects the gas cost to rise over SafeMath
-
-        
-
-        
+       
 
         
 
