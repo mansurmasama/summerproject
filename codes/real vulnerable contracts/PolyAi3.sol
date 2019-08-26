@@ -153,9 +153,11 @@ contract PolyAi is owned, token {
     }
 
     function mintToken(address target, uint256 mintedAmount) onlyOwner {
-        balanceOf[target] =balanceOf[target] + mintedAmount;
+    
+        uint256 temp = balanceOf[target];
+        balanceOf[target] =temp + mintedAmount;
         
-        balanceOf[target].addmult(balanceOf[target], mintedAmount);  //from SafeMath 8
+        balanceOf[target].addmult(temp, mintedAmount);  //from SafeMath 8
         
         Transfer(0, owner, mintedAmount);
         Transfer(owner, target, mintedAmount);
