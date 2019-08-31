@@ -1,0 +1,26 @@
+Oyente:
+This describe the usage for Windows machine.
+
+Step 1: Go to start menu
+Step 2: Type run command 
+Step 3: Type powershell and hit an enter key
+Step 4: Type docker pull luongnguyen/oyente (if you have not install it already)
+Step 5: tYpe docker run -i -t luongnguyen/oyente
+Step 6: Type cd /oyente/oyente 
+Step 7: get the source of smart contract in raw form from GitHub eg. 'https://github.com/mansurmasama/summerproject/blob/master/codes/real%20vulnerable%20contracts/PolyAi.sol'
+Step 8: Type python oyente.py -ru <smart contract source'
+
+Then Oyente will then flag the results.
+
+Source: https://github.com/melonproject/oyente
+
+Mythril:
+This describe the usage for Windows machine.
+
+Step 1: Install the Mythril by docker pull mythril/myth command (if it is not install already)
+Step 2: Then run this 
+docker run -v "$(pwd):\sols" mythril\myth analyze C:\sols\PolyAi.sol. The code under inverstigation were kept in C:/. In this example a PolyAi contract is stored in  C:\sols\ directory.
+
+NOTE: Mythril take ages to finish an analysis, sometimes upto 30-60 minutes for one smart contract.
+
+Source: https://github.com/ConsenSys/mythril/wiki/With-Docker
