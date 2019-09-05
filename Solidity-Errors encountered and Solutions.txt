@@ -1,4 +1,0 @@
-1. data location must be memory for parameter in function
-https://ethereum.stackexchange.com/questions/62906/typeerror-data-location-must-be-memory-for-parameter-in-function-but-none-wa
-
-2.
