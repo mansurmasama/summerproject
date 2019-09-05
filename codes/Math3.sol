@@ -3,11 +3,6 @@
 pragma solidity ^0.4.2;
 
 
-
-//Modifying the require() to test the output not input
-//import "browser/SafeMath4.sol";
-
-//This library focuses on output (c) rather than inputs (a and b) V1
 library SafeMath {
 
      //merging add and mul functions 
@@ -40,12 +35,7 @@ contract Maths {
     //c=a+b;
     total=x*y;
     total.addmult(x,y);
-    //total.addmult;
-    //addmult(total)=x*y;
-    //addmult(total);
-    //this.addmult(total);   //only for external function, public function consumes more gas than external
-    
-}
+    }
 
                                                                                                                                         
     // addition operation
@@ -53,11 +43,7 @@ contract Maths {
 
     total =x+y;
     total.addmult(x,y);
-    //total =.addmult(total);
-    //addmult(total)=x+y;
-    //addmult(total);
-    //this.addmult(total);
-
+  
 }
 
 
