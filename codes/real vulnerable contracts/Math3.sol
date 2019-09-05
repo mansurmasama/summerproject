@@ -35,12 +35,7 @@ contract Maths {
     //c=a+b;
     total=x*y;
     total.addmult(x,y);
-    //total.addmult;
-    //addmult(total)=x*y;
-    //addmult(total);
-    //this.addmult(total);   //only for external function, public function consumes more gas than external
-    
-}
+    }
 
                                                                                                                                         
     // addition operation
@@ -48,11 +43,7 @@ contract Maths {
 
     total =x+y;
     total.addmult(x,y);
-    //total =.addmult(total);
-    //addmult(total)=x+y;
-    //addmult(total);
-    //this.addmult(total);
-
+  
 }
 
 
